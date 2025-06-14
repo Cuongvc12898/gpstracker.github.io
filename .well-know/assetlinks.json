@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.anvi.gpstracker.dev",
+    "sha256_cert_fingerprints":
+    ["5F:47:3C:B8:BA:8D:2A:CC:A4:E2:D7:BE:50:34:70:01:29:4E:B8:EF:AD:D5:AC:65:63:3C:77:CF:D2:00:26:24"]
+  }
+}]
