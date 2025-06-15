@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPS Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // Lấy parameters từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const lat = urlParams.get('lat');
+        const lng = urlParams.get('lng');
+
+        // Tạo deep link cho app
+        const appDeepLink = `gps-tracker://cuongvc12898.github.io/?lat=${lat}&lng=${lng}`;
+
+        // Link đến Play Store
+        const playStoreLink = "https://play.google.com/store/apps/details?id=com.anvi.gpstracker";
+
+        // Kiểm tra xem có phải mobile không
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // Thử mở app trước
+            window.location.href = appDeepLink;
+
+            // Nếu không mở được app sau 2 giây, chuyển đến Play Store
+            setTimeout(function() {
+                window.location.href = playStoreLink;
+            }, 2000);
+        } else {
+            // Nếu không phải mobile, chuyển đến Play Store
+            window.location.href = playStoreLink;
+        }
+    </script>
+</head>
+<body>
+<h1>Redirecting to GPS Tracker...</h1>
+</body>
+</html>
